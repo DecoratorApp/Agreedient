@@ -8,13 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet var navBar: UINavigationBar!
+    let refreshControl = UIRefreshControl()
+    
+    var tableViewController: UITableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableViewController?.refreshControl = refreshControl
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TableViewControllerEmbedSegue" {
+            tableViewController = segue.destination as? UITableViewController
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
