@@ -93,10 +93,6 @@ class ViewController: UIViewController {
         }
     }
     
-//    func downloadRecipes() -> Promise<[Recipe]> {
-//        
-//    }
-    
     func downloadThumbnails(for recipes: [Recipe], and thumbnailLinkFromRecipeLink: [String:String]) {
         var thumbnailDataFromRecipeLink = [String: Data]()
         
