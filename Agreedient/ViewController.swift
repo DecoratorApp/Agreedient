@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 import Alamofire
+import PromiseKit
 import RealmSwift
 
 class ViewController: UIViewController {
@@ -47,16 +49,12 @@ class ViewController: UIViewController {
             self.realm.add(ingredient, update: true)
         }
         
-        // Asynchronous
-        Alamofire.request("http://www.recipepuppy.com/api/?i=\(ingredientName)").responseJSON { response in
-            // parse JSON, download and process images
-            
-//            usleep(1000000) //delay added so that we can see that our pre-downloaded entries are working. 
-            
-            let dictionary = response.result.value as! NSDictionary
+        
+        Alamofire.request("http://www.recipepuppy.com/api/?i=\(ingredientName)").validate().responseJSON().then { json -> Void in
+            let dictionary = json as! NSDictionary
             
             let resultsArray = dictionary["results"] as! NSArray
-
+            
             var thumbnailLinkFromRecipeLink = [String:String]()
             
             var recipes = [Recipe]()
@@ -75,8 +73,6 @@ class ViewController: UIViewController {
                 recipes.append(Recipe(value: ["title": title.trimmingCharacters(in: .whitespacesAndNewlines), "link": link.trimmingCharacters(in: .whitespacesAndNewlines), "ingredients": ingredients]))
             }
             
-            self.downloadThumbnails(for: recipes, and: thumbnailLinkFromRecipeLink)
-            
             try! self.realm.write {
                 for recipe in recipes {
                     
@@ -89,8 +85,17 @@ class ViewController: UIViewController {
             self.tableViewController?.tableView.reloadData()
             
             self.refreshControl.endRefreshing()
+            
+            self.downloadThumbnails(for: recipes, and: thumbnailLinkFromRecipeLink)
+            
+        }.catch { error in
+            print(error)
         }
     }
+    
+//    func downloadRecipes() -> Promise<[Recipe]> {
+//        
+//    }
     
     func downloadThumbnails(for recipes: [Recipe], and thumbnailLinkFromRecipeLink: [String:String]) {
         var thumbnailDataFromRecipeLink = [String: Data]()
@@ -99,12 +104,12 @@ class ViewController: UIViewController {
         
         for recipe in recipes {
             if recipe.imgData == nil {
-                Alamofire.request(thumbnailLinkFromRecipeLink[recipe.link]!,
-                                  method: .get,
-                                  parameters: nil,
-                                  encoding: URLEncoding.default,
-                                  headers: nil).response { response in
-                                    thumbnailDataFromRecipeLink[recipe.link] = response.data
+                _ = Alamofire.request(thumbnailLinkFromRecipeLink[recipe.link]!,
+                                      method: .get,
+                                      parameters: nil,
+                                      encoding: URLEncoding.default,
+                                      headers: nil).response().then { (_, _, data) -> Void in
+                                    thumbnailDataFromRecipeLink[recipe.link] = data
                                     
                                     recipesAwaitingDownload.remove(recipe.link)
                                     
@@ -118,8 +123,13 @@ class ViewController: UIViewController {
                                             }
                                         }
                                         self.tableViewController?.tableView.reloadData()
+                                        self.refreshControl.endRefreshing()
                                     }
+                    }.catch { error in
+                        print(error)
                 }
+            } else {
+                recipesAwaitingDownload.remove(recipe.link)
             }
         }
     }

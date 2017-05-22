@@ -9,6 +9,7 @@ target 'Agreedient' do
   pod ‘RealmSwift’  
   pod 'Alamofire', '~> 4.4'
   pod “PromiseKit”, “~> 4.0”
+  pod ‘PromiseKit/Alamofire’, ‘~> 4.0’
 
   target 'AgreedientTests' do
     inherit! :search_paths
@@ -16,6 +17,7 @@ target 'Agreedient' do
     pod ‘RealmSwift’
     pod 'Alamofire', '~> 4.4'
     pod “PromiseKit”, “~> 4.0”
+    pod ‘PromiseKit/Alamofire’, ‘~> 4.0’
   end
 
 end
