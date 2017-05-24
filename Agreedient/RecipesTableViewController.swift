@@ -9,6 +9,7 @@
 import Alamofire
 import PromiseKit
 import RealmSwift
+import SafariServices
 import SwiftyJSON
 import UIKit
 
@@ -36,6 +37,24 @@ class RecipesTableViewController: UITableViewController {
     }
     ingredient = ingredients?.random(excluding: ingredient) ?? ingredient
     initializeTitle()
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    let recipe = ingredient.recipes[indexPath.row]
+    guard
+      let url = URL(string: recipe.href),
+      presentedViewController is SFSafariViewController == false
+      else {
+        return
+    }
+    let viewController = SFSafariViewController(url: url)
+    viewController.modalPresentationStyle = .overCurrentContext
+    present(
+      viewController,
+      animated: true,
+      completion: nil
+    )
   }
 
   @IBAction
@@ -108,11 +127,11 @@ class RecipesTableViewController: UITableViewController {
         debugPrint(error)
       }
       .always { [weak self] in
-        self?.initializeTitle()
         let elapsed = Date().timeIntervalSince(date)
         let delay = max(0.0, 1.0 - elapsed)
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
           sender.endRefreshing()
+          self?.initializeTitle()
         }
       }
   }
