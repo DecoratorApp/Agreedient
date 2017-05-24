@@ -13,12 +13,11 @@
 		FC61DD521ED0E829000CCA5A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61DD511ED0E829000CCA5A /* Ingredient.swift */; };
 		FC61DD541ED13331000CCA5A /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61DD531ED13331000CCA5A /* RecipeTableViewCell.swift */; };
 		FC75B8301ECF6D76005372A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75B82F1ECF6D76005372A1 /* AppDelegate.swift */; };
-		FC75B8321ECF6D76005372A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75B8311ECF6D76005372A1 /* ViewController.swift */; };
 		FC75B8351ECF6D76005372A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC75B8331ECF6D76005372A1 /* Main.storyboard */; };
 		FC75B8371ECF6D76005372A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC75B8361ECF6D76005372A1 /* Assets.xcassets */; };
 		FC75B83A1ECF6D76005372A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC75B8381ECF6D76005372A1 /* LaunchScreen.storyboard */; };
 		FC75B8451ECF6D76005372A1 /* AgreedientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75B8441ECF6D76005372A1 /* AgreedientTests.swift */; };
-		FC75B8501ECF71CF005372A1 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75B84F1ECF71CF005372A1 /* ResultsTableViewController.swift */; };
+		FC75B8501ECF71CF005372A1 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75B84F1ECF71CF005372A1 /* RecipesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +36,11 @@
 		1EC2B4345847AC2166F58255 /* Pods-Agreedient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agreedient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Agreedient/Pods-Agreedient.debug.xcconfig"; sourceTree = "<group>"; };
 		692EF763AF71B2F91C0575C2 /* Pods_Agreedient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agreedient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98894FFAB6E9216C75763FFE /* Pods-AgreedientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgreedientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgreedientTests/Pods-AgreedientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FC61DD4F1ECFB914000CCA5A /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		FC61DD4F1ECFB914000CCA5A /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		FC61DD511ED0E829000CCA5A /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		FC61DD531ED13331000CCA5A /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		FC75B82C1ECF6D76005372A1 /* Agreedient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agreedient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC75B82F1ECF6D76005372A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC75B8311ECF6D76005372A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC75B82F1ECF6D76005372A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		FC75B8341ECF6D76005372A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC75B8361ECF6D76005372A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC75B8391ECF6D76005372A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +48,7 @@
 		FC75B8401ECF6D76005372A1 /* AgreedientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgreedientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75B8441ECF6D76005372A1 /* AgreedientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreedientTests.swift; sourceTree = "<group>"; };
 		FC75B8461ECF6D76005372A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC75B84F1ECF71CF005372A1 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		FC75B84F1ECF71CF005372A1 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		FDE254331325FC016EB3DBCB /* Pods_AgreedientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgreedientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,16 +115,15 @@
 		FC75B82E1ECF6D76005372A1 /* Agreedient */ = {
 			isa = PBXGroup;
 			children = (
-				FC75B82F1ECF6D76005372A1 /* AppDelegate.swift */,
-				FC75B8311ECF6D76005372A1 /* ViewController.swift */,
-				FC75B8331ECF6D76005372A1 /* Main.storyboard */,
-				FC61DD4F1ECFB914000CCA5A /* Recipe.swift */,
-				FC61DD531ED13331000CCA5A /* RecipeTableViewCell.swift */,
-				FC61DD511ED0E829000CCA5A /* Ingredient.swift */,
-				FC75B84F1ECF71CF005372A1 /* ResultsTableViewController.swift */,
 				FC75B8361ECF6D76005372A1 /* Assets.xcassets */,
-				FC75B8381ECF6D76005372A1 /* LaunchScreen.storyboard */,
 				FC75B83B1ECF6D76005372A1 /* Info.plist */,
+				FC75B8381ECF6D76005372A1 /* LaunchScreen.storyboard */,
+				FC75B8331ECF6D76005372A1 /* Main.storyboard */,
+				FC75B82F1ECF6D76005372A1 /* AppDelegate.swift */,
+				FC75B84F1ECF71CF005372A1 /* RecipesTableViewController.swift */,
+				FC61DD531ED13331000CCA5A /* RecipeTableViewCell.swift */,
+				FC61DD4F1ECFB914000CCA5A /* Recipe.swift */,
+				FC61DD511ED0E829000CCA5A /* Ingredient.swift */,
 			);
 			path = Agreedient;
 			sourceTree = "<group>";
@@ -344,8 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC75B8501ECF71CF005372A1 /* ResultsTableViewController.swift in Sources */,
-				FC75B8321ECF6D76005372A1 /* ViewController.swift in Sources */,
+				FC75B8501ECF71CF005372A1 /* RecipesTableViewController.swift in Sources */,
 				FC61DD521ED0E829000CCA5A /* Ingredient.swift in Sources */,
 				FC61DD541ED13331000CCA5A /* RecipeTableViewCell.swift in Sources */,
 				FC75B8301ECF6D76005372A1 /* AppDelegate.swift in Sources */,

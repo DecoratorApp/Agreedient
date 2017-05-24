@@ -10,24 +10,26 @@ import Foundation
 import RealmSwift
 
 class Recipe: Object {
-    dynamic var title = ""
-    dynamic var link = ""
-    let ingredients = List<Ingredient>()
-    dynamic var imgData:NSData? = nil
-    
-    override static func primaryKey() -> String? {
-        return "link" // url should be unique to the recipe, while title ("Chocolate delights", for instance) might not.
-    }
-    
-//    override static func indexedProperties() -> [String] {
-//        return ["title"]
-//    }
-    
-    
-//    func someFunc() {
-//        ingredients.append(Ingredient(value: "name = 'my dad'"))
-//        
-//        print(ingredients)
-//    }
-    
+
+  override static func primaryKey() -> String? {
+    // href should be unique to the recipe, while title ("Chocolate delights", for instance) might not.
+    return "href"
+  }
+
+  dynamic var href = ""
+  dynamic var title = ""
+  dynamic var thumbnail = ""
+  let ingredients = List<Ingredient>()
+
+  convenience init(href: String,
+                   title: String,
+                   thumbnail: String,
+                   ingredients: [Ingredient]) {
+    self.init()
+    self.href = href
+    self.title = title
+    self.thumbnail = thumbnail
+    self.ingredients.append(objectsIn: ingredients)
+  }
+
 }

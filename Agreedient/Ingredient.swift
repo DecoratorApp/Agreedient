@@ -21,4 +21,10 @@ class Ingredient: Object {
     override static func indexedProperties() -> [String] {
         return ["name"]
     }
+
+  convenience init(name: String) {
+    self.init()
+    self.name = name
+  }
+
 }
