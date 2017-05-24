@@ -91,7 +91,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="EgI-92-BEh"/>
                     <refreshControl key="refreshControl" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="OBY-R9-Uh9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <action selector="didChangeRefreshControl:" destination="CF6-N5-vLr" eventType="valueChanged" id="akb-nR-zMe"/>
                         </connections>

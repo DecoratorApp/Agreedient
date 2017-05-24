@@ -43,8 +43,16 @@ class RecipesTableViewController: UITableViewController {
     ingredient = ingredients?.random(excluding: ingredient) ?? ingredient
     initializeTitle()
     tableView.reloadData()
+    guard
+      let name = ingredient.name
+        .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+      else {
+        sender.endRefreshing()
+        return
+    }
+    let date = Date()
     Alamofire
-      .request("http://www.recipepuppy.com/api/?i=\(ingredient.name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)")
+      .request("http://www.recipepuppy.com/api/?i=\(name)")
       .validate()
       .responseJSON(queue: background)
       .then { [weak self] json throws -> Promise<Void> in
@@ -66,10 +74,7 @@ class RecipesTableViewController: UITableViewController {
             let ingredients = json["ingredients"].string?
               .components(separatedBy: ",")
               .map({ $0.trimmingCharacters(in: .whitespacesAndNewlines) })
-              .map({
-                realm.object(ofType: Ingredient.self, forPrimaryKey: $0)
-                  ?? Ingredient(name: $0)
-              })
+              .map({ realm.object(ofType: Ingredient.self, forPrimaryKey: $0) ?? Ingredient(name: $0) })
             else {
               return nil
           }
@@ -103,8 +108,12 @@ class RecipesTableViewController: UITableViewController {
         debugPrint(error)
       }
       .always { [weak self] in
-        self?.refreshControl?.endRefreshing()
         self?.initializeTitle()
+        let elapsed = Date().timeIntervalSince(date)
+        let delay = max(0.0, 1.0 - elapsed)
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+          sender.endRefreshing()
+        }
       }
   }
 
