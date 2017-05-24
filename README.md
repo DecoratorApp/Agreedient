@@ -1,5 +1,5 @@
 # Agreedient
-<i>A Decorator Interview App
+<i>A Decorator Interview App</i>
 
 ## The Challenge
 Build an app that shows recipes using a random ingredient after interacting with a refresh control.
