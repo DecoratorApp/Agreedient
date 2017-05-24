@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Agreedient.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -41,42 +46,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>27A1F09DF27E15CE6A27CD826ECBDC88</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>60AAFABD20740925F71D92798834F2A2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A92302004D304125718778CD6C2ED731</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ADB2578FD0F507CFD7FBAE4107A0E359</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BC6E11619862D64C7EE8FD2497401AFB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E798232111467A40F97C5C7FCC69A26D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

@@ -5,6 +5,7 @@ target 'Agreedient' do
 
   # Pods for Agreedient
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'RealmSwift'
   pod 'PromiseKit'
   pod 'SwiftyJSON'

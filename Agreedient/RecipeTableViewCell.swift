@@ -6,6 +6,7 @@
 //  Copyright © 2017 Decorator Technologies, Inc. All rights reserved.
 //
 
+import AlamofireImage
 import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
@@ -32,14 +33,14 @@ class RecipeTableViewCell: UITableViewCell {
       ingredientsLabel.text = recipe.ingredients
         .map{ $0.name }
         .joined(separator: ", ")
-      guard
-        let url = URL(string: recipe.thumbnail),
-        let data = try? Data(contentsOf: url)
-        else {
-          // TODO: Use a default image
-          return
+      guard let url = URL(string: recipe.thumbnail) else {
+        // TODO: Use a default image
+        return
       }
-      thumbnail.image = UIImage(data: data)
+      thumbnail.af_setImage(
+        withURL: url,
+        imageTransition: .crossDissolve(0.2)
+      )
     }
   }
 
