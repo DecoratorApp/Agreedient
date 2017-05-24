@@ -2,8 +2,8 @@
 //  RecipeTableViewCell.swift
 //  Agreedient
 //
-//  Created by Ethan Lillie on 5/20/17.
-//  Copyright © 2017 ME. All rights reserved.
+//  Created by Ethan Lillie on 2017-05-20.
+//  Copyright © 2017 Decorator Technologies, Inc. All rights reserved.
 //
 
 import UIKit

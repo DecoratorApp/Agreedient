@@ -2,8 +2,8 @@
 //  AgreedientTests.swift
 //  AgreedientTests
 //
-//  Created by Ethan Lillie on 5/19/17.
-//  Copyright © 2017 ME. All rights reserved.
+//  Created by Ethan Lillie on 2017-05-19.
+//  Copyright © 2017 Decorator Technologies, Inc. All rights reserved.
 //
 
 import XCTest
