@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -102,6 +102,7 @@
 				8D8F634389F428BD2F5A93A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		FC75B82D1ECF6D76005372A1 /* Products */ = {
 			isa = PBXGroup;
@@ -189,11 +190,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = ME;
+				ORGANIZATIONNAME = "Decorator Technologies, Inc.";
 				TargetAttributes = {
 					FC75B82B1ECF6D76005372A1 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 9NNF93T6RM;
+						DevelopmentTeam = M8BDG9EV2J;
 						ProvisioningStyle = Automatic;
 					};
 					FC75B83F1ECF6D76005372A1 = {
@@ -205,7 +206,7 @@
 				};
 			};
 			buildConfigurationList = FC75B8271ECF6D76005372A1 /* Build configuration list for PBXProject "Agreedient" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -485,7 +486,7 @@
 			baseConfigurationReference = 1EC2B4345847AC2166F58255 /* Pods-Agreedient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9NNF93T6RM;
+				DEVELOPMENT_TEAM = M8BDG9EV2J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/RealmSwift\"",
@@ -494,9 +495,9 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
 				);
 				INFOPLIST_FILE = Agreedient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EML.Agreedient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.decoratorapp.Agreedient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -508,7 +509,7 @@
 			baseConfigurationReference = 09DF8CDD4B9B0D3F84FDDE1C /* Pods-Agreedient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9NNF93T6RM;
+				DEVELOPMENT_TEAM = M8BDG9EV2J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/RealmSwift\"",
@@ -517,9 +518,9 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
 				);
 				INFOPLIST_FILE = Agreedient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EML.Agreedient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.decoratorapp.Agreedient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
